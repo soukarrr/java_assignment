@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ItemController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="196.0" layoutY="63.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="32.0" layoutY="-77.0" prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="6.0" text="Point of Sale">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="197.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="555.0" prefWidth="199.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="add_item_button" layoutX="48.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchForm" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Add Items" />
+                              <Button fx:id="invoices_button" layoutX="48.0" layoutY="224.0" mnemonicParsing="false" onAction="#switchForm" stylesheets="@dashboardDesign.css" text="Invoices">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="nav-btn" />
+                                 </styleClass></Button>
+                              <Line endX="100.0" layoutX="82.0" layoutY="173.0" startX="-69.5" stroke="#f8f6f6" />
+                              <Line endX="113.0" layoutX="70.0" layoutY="305.0" startX="-62.0" stroke="#f8f4f4" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="invoiceForm" layoutX="57.0" layoutY="7.0" prefHeight="671.0" prefWidth="903.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="3.0" prefHeight="542.0" prefWidth="506.0" stylesheets="@dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="order_tableView" layoutX="7.0" layoutY="8.0" prefHeight="542.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="orders_col_id" prefWidth="108.0" text="ID" />
+                                          <TableColumn fx:id="orders_col_itemName" prefWidth="113.0" text="Item_Name" />
+                                          <TableColumn fx:id="orders_col_itemBarcode" prefWidth="150.0" text="Item_Barcode" />
+                                          <TableColumn fx:id="orders_col_price" prefWidth="134.0" text="Price" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="531.0" layoutY="7.0" prefHeight="523.0" prefWidth="352.0" stylesheets="@dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="64.0" layoutY="253.0" prefHeight="36.0" prefWidth="86.0" text="Total:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="orders_total" layoutX="175.0" layoutY="254.0" prefHeight="35.0" prefWidth="138.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="64.0" layoutY="191.0" prefHeight="35.0" prefWidth="95.0" text="Paid">
+                                       <font>
+                                          <Font name="Tahoma" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="order_amount" layoutX="152.0" layoutY="196.0" onAction="#ordersAmount" />
+                                    <Label layoutX="64.0" layoutY="326.0" prefHeight="36.0" prefWidth="86.0" text="Change">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_change" layoutX="175.0" layoutY="327.0" prefHeight="35.0" prefWidth="154.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="271.0" layoutY="403.0" mnemonicParsing="false" onAction="#ordersPay" prefHeight="35.0" prefWidth="72.0" text="Pay" />
+                                    <Button layoutX="93.0" layoutY="410.0" mnemonicParsing="false" onAction="#orderReset" prefHeight="35.0" prefWidth="72.0" text="Reset" />
+                                    <TextField fx:id="text" layoutX="143.0" layoutY="41.0" onAction="#ordersAdd" />
+                                    <Label layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="129.0" text="Enter Barcode:" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="tableForm" layoutX="277.0" layoutY="21.0" prefHeight="525.0" prefWidth="594.0" stylesheets="@dashboardDesign.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="addItems_tableView" layoutX="1.0" layoutY="46.0" prefHeight="476.0" prefWidth="590.0">
+                                 <columns>
+                                    <TableColumn fx:id="addItems_col_itemId" prefWidth="148.0" text="Item ID" />
+                                    <TableColumn fx:id="addItems_col_itemName" prefWidth="133.0" text="Item Name" />
+                                    <TableColumn fx:id="addItems_col_itemBarcode" prefWidth="165.0" text="Item Barcode" />
+                                    <TableColumn fx:id="addItems_col_itemPrice" prefWidth="143.0" text="Item Price" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="itemForm" layoutX="14.0" layoutY="23.0" prefHeight="522.0" prefWidth="249.0" stylesheets="@dashboardDesign.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label layoutX="14.0" layoutY="41.0" text="Item ID:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addItems_itemID" layoutX="72.0" layoutY="41.0" prefHeight="25.0" prefWidth="163.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                              <Label layoutX="64.0" layoutY="91.0" text="Item Name:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addItems_itemName" layoutX="19.0" layoutY="116.0" prefHeight="25.0" prefWidth="213.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                              <TextField fx:id="addItems_itemBarcode" layoutX="19.0" layoutY="194.0" prefHeight="25.0" prefWidth="213.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                              <Label layoutX="64.0" layoutY="169.0" text="Item Barcode:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="255.0" text="Item Price:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addItems_itemPrice" layoutX="90.0" layoutY="255.0" prefHeight="25.0" prefWidth="146.0" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+                              <Button fx:id="addItems_addBtn" layoutX="26.0" layoutY="349.0" mnemonicParsing="false" onAction="#addItemsAdd" prefHeight="40.0" prefWidth="85.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
+                              <Button layoutX="126.0" layoutY="349.0" mnemonicParsing="false" onAction="#addItemReset" prefHeight="40.0" prefWidth="85.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Reset" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

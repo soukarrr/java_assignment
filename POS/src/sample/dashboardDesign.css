@@ -1,0 +1,123 @@
+.top-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px   .4px    .2px    .4px;
+}
+.semi-top-form
+{
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:.2px   .4px    .4px    .4px;
+}
+.nav-form
+{
+    -fx-background-color:linear-gradient(to bottom right, #23825e, #6d6e30);
+}
+.nav-btn
+{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+    -fx-font-size:16px;
+    -fx-text-fill:#fff;
+    -fx-alignment:CENTER-LEFT;
+}
+.shadow
+{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 5,0,0,0);
+}
+.white-bg
+{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+
+}
+.card
+{
+    -fx-background-color:linear-gradient(to right, #2e4d39, #396b57);
+    -fx-background-radius:5px;
+}
+.textfield
+{
+    -fx-background-color:linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius:4px;
+    -fx-border-color:linear-gradient(to bottom right, #23825e, #6d6e30);
+    -fx-border-radius:4px;
+    -fx-border-width:1px;
+}
+.textfield:focused
+{
+    -fx-background-color:#fff;
+    -fx-border-width:2px;
+
+}
+.add-btn
+{
+    -fx-background-color:#243e6b;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+}
+.add-btn:hover
+{
+    -fx-background-color:#4969a1;
+}
+
+
+.update-btn
+{
+    -fx-background-color:#3b754d;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+}
+.update-btn:hover
+{
+    -fx-background-color:#459d5e;
+}
+
+.clear-btn
+{
+    -fx-background-color:#7f417a;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+}
+.clear-btn:hover
+{
+    -fx-background-color:#ae54a8;
+}
+
+.delete-btn
+{
+    -fx-background-color:#86292d;
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+}
+.delete-btn:hover
+{
+    -fx-background-color:#b52647;
+}
+.search
+{
+    -fx-background-color:transparent;
+    -fx-border-color:linear-gradient(to bottom right, #23825e, #6d6e30);
+    -fx-font-size:14px;
+    -fx-font-family:"Tahoma";
+    -fx-border-width:1px;
+    -fx-padding:0px 0px 0px 28px;
+    -fx-border-radius:5px;
+}
+.search:focused
+{
+    -fx-border-width:2px;
+}
